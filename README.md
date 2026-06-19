@@ -265,7 +265,7 @@ https://github.com/harshgupta73
 
 ### LinkedIn
 
-https://www.linkedin.com/in/harshvardhan-gupta-a0487731a
+https://www.linkedin.com/in/harshvardhan-gupta-b10308397
 
 ---
 
