@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6a34c113d4109aba32322e77"
+  },
+  "rollno": 1,
+  "name": "harsh",
+  "email": "harsh@gmail.com",
+  "course": "IT",
+  "__v": 0
+}]

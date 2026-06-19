@@ -8,7 +8,7 @@ console.log(os.totalmem())
 console.log(os.freemem())
 console.log(os.cpus())
 console.log(os.homedir())
-
+//comment every function of fs, and run only one function at a time for fs
 const data = "hello harsh here!"
 fs.writeFile("student.txt",data,(err)=>{
     if(err){
@@ -19,29 +19,29 @@ fs.writeFile("student.txt",data,(err)=>{
     }
 })
 
-fs.readFile("student.txt",(err,data)=>{
-    if(err){
-        console.log(err)
-    }
-    else{
-        console.log(data.toString())
-    }
-})
+// fs.readFile("student.txt",(err,data)=>{
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         console.log(data.toString())
+//     }
+// })
 
-const data = "Bye Bye!"
-fs.appendFile("student.txt",data,(err)=>{
-    if(err){
-        console.log(err)
-    }
-    else{
-        console.log("file appended")
-    }
-})
+// const data = "Bye Bye!"
+// fs.appendFile("student.txt",data,(err)=>{
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         console.log("file appended")
+//     }
+// })
 
-fs.unlink("student.txt",(err)=>{
-    if (err) {
-        console.log(err)
-    } else {
-        console.log("file deleted")
-    }
-})
+// fs.unlink("student.txt",(err)=>{
+//     if (err) {
+//         console.log(err)
+//     } else {
+//         console.log("file deleted")
+//     }
+// })

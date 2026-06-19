@@ -21,17 +21,31 @@
         </header>
         <main>
             <div
-                class="alert alert-primary alert-dismissible fade show"
-                role="alert"
+                class="container mt-5"
             >
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="alert"
-                    aria-label="Close"
-                ></button>
-            
-                <strong>Hello User!</strong> This is contact page
+                <div
+                    class="row justify-content-center align-items-center g-2"
+                >
+
+                        <% products.forEach(p => { %>
+                            <div class="col">
+                            <div class="card">
+                                <img class="card-img-top" src="<%= p.image %>" alt="Title" style="height:250px; width:100%; object-fit: cover;" />
+                                <div class="card-body">
+                                    <h4 class="card-title"><%= p.name %></h4>
+                                    <p class="card-text"><%= p.price %></p>
+                                    <p class="card-text"><%= p.category %></p>
+                                    <p class="card-text"><%= p.quantity %></p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                        <% }) %>
+                    
+                    
+                </div>
+                
+                
             </div>
             
         </main>

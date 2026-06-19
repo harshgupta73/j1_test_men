@@ -23,60 +23,59 @@
             <div
                 class="container border rounded shadow mt-5 p-5 col-4"
             >
-                <form action="/form" method="post">
+                <form action="/calculate" method="post">
+                    <h1>Calculator</h1>
                     <div class="mb-3">
                         <input
-                            type="text"
+                            type="number"
                             class="form-control"
-                            name="name"
+                            name="num1"
                             id=""
                             aria-describedby="helpId"
-                            placeholder="Name"
+                            placeholder="Enter First Number"
                         />
                     </div>
 
                     <div class="mb-3">
                         <input
-                            type="email"
+                            type="number"
                             class="form-control"
-                            name="email"
+                            name="num2"
                             id=""
                             aria-describedby="helpId"
-                            placeholder="Email"
-                        />
-                    </div>
-
-                    <div class="mb-3">
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="number"
-                            id=""
-                            aria-describedby="helpId"
-                            placeholder="Number"
-                        />
-                    </div>
-
-                    <div class="mb-3">
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="course"
-                            id=""
-                            aria-describedby="helpId"
-                            placeholder="Course"
+                            placeholder="Enter Second Number"
                         />
                     </div>
                     
+
+                    <div class="mb-3">
+                        <select
+                            class="form-select form-select-lg"
+                            name="operation"
+                            id=""
+                        >
+                            <option value="add">Addition</option>
+                            <option value="sub">Subtraction</option>
+                            <option value="mul">Multiplication</option>
+                            <option value="div">Division</option>
+                        </select>
+                    </div>
+
                     <button
                         type="submit"
                         class="btn btn-primary"
                     >
-                        Submit
+                        Calculate
                     </button>
                     
+                    
                 </form>
-                
+
+                <% if(typeof result !== 'undefined') { %>
+                    <div class="alert alert-success mt-3">
+                    Result: <%= result %>
+                    </div>
+                <% } %>
             </div>
             
         </main>

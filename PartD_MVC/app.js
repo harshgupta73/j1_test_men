@@ -1,9 +1,9 @@
 const express = require('express');
 const router = require('./routes/productRoutes');
 const { connectDB } = require('./db');
+connectDB()
 
 const app = express()
-connectDB()
 app.use(express.json())
 app.use("/",router)
 

@@ -9,6 +9,7 @@ const insertProd= async (req,res)=>{
             quantity:req.body.quantity
         })
         const result = await data.save()
+        res.json(result)
     } catch (error) {
         console.log(error)
     }
@@ -34,6 +35,15 @@ const deleteProd= async (req,res)=>{
 
 const showProd= async (req,res)=>{
     try {
+        const result = await productModel.find()
+        res.json(result)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const showProdById= async (req,res)=>{
+    try {
         const result = await productModel.findById(req.params.id)
         res.json(result)
     } catch (error) {
@@ -41,4 +51,4 @@ const showProd= async (req,res)=>{
     }
 }
 
-module.exports={insertProd,updateProd,deleteProd,showProd}
+module.exports={insertProd,updateProd,deleteProd,showProd,showProdById}
